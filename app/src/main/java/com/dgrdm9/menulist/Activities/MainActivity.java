@@ -8,9 +8,11 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.dgrdm9.menulist.Fragments.FirstFragment;
 import com.dgrdm9.menulist.Fragments.ForthFragment;
+import com.dgrdm9.menulist.Fragments.HomeFragment;
 import com.dgrdm9.menulist.Fragments.PrehFragment;
 import com.dgrdm9.menulist.Fragments.SecondFragment;
 import com.dgrdm9.menulist.Fragments.ThirdFragment;
@@ -30,6 +32,30 @@ public class MainActivity extends AppCompatActivity {
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
 
+        setFragmentByDefault();
+
+        drawerLayout.addDrawerListener(new DrawerLayout.DrawerListener() {
+            @Override
+            public void onDrawerSlide(@NonNull View view, float v) {
+
+            }
+
+            @Override
+            public void onDrawerOpened(@NonNull View view) {
+
+            }
+
+            @Override
+            public void onDrawerClosed(@NonNull View view) {
+
+            }
+
+            @Override
+            public void onDrawerStateChanged(int i) {
+
+            }
+        });
+
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
@@ -38,6 +64,10 @@ public class MainActivity extends AppCompatActivity {
                 Fragment fragment = null;
 
                 switch (menuItem.getItemId()) {
+                    case R.id.menu_home:
+                        fragment = new HomeFragment();
+                        fragmentTransaction = true;
+                        break;
                     case R.id.menu_prehistory:
                         fragment = new PrehFragment();
                         fragmentTransaction = true;
@@ -60,12 +90,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                 }
                 if (fragmentTransaction) {
-                    getSupportFragmentManager()
-                            .beginTransaction()
-                            .replace(R.id.content_frame, fragment)
-                            .commit();
-                    menuItem.setChecked(true);
-                    getSupportActionBar().setTitle(menuItem.getTitle());
+                    changeFragment(fragment, menuItem);
                     drawerLayout.closeDrawers();
                 }
                 return true;
@@ -73,12 +98,24 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    private void changeFragment(Fragment fragment, MenuItem menuItem) {
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.content_frame, fragment)
+                .commit();
+        menuItem.setChecked(true);
+        getSupportActionBar().setTitle(menuItem.getTitle());
+    }
 
     private void setToolbar() {
         android.support.v7.widget.Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_home);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_drawer);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    }
+
+    private void setFragmentByDefault() {
+        changeFragment(new HomeFragment(), navigationView.getMenu().getItem(0));
     }
 
     @Override

@@ -23,7 +23,7 @@
                                           <PersistentState>
                                             <option name="values">
                                               <map>
-                                                <entry key="url" value="jar:file:/C:/Program%20Files/Android/Android%20Studio/plugins/android/lib/android.jar!/images/material_design_icons/navigation/ic_menu_black_24dp.xml" />
+                                                <entry key="url" value="jar:file:/C:/Program%20Files/Android/Android%20Studio/plugins/android/lib/android.jar!/images/material_design_icons/action/ic_home_black_24dp.xml" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -33,7 +33,9 @@
                                   </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="outputName" value="ic_home" />
+                                      <entry key="assetType" value="IMAGE" />
+                                      <entry key="imageAsset" value="D:\Descargas\numeric-4-box.png" />
+                                      <entry key="outputName" value="ic_four" />
                                       <entry key="theme" value="HOLO_DARK" />
                                     </map>
                                   </option>
@@ -58,7 +60,7 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="outputIconType" value="LAUNCHER_LEGACY" />
+                            <entry key="outputIconType" value="ACTIONBAR" />
                           </map>
                         </option>
                       </PersistentState>
