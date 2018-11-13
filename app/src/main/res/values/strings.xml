@@ -5,10 +5,11 @@
     <string name="third_gen">Tercera Generación</string>
     <string name="forth_gen">Cuarta Generación</string>
     <string name="prehistory">Prehistoria</string>
-    <string name="comp_history">Línea Temporal</string>
+    <string name="comp_history">Computer History</string>
     <string name="group">Generaciones</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="home">Home</string>
+    <string name="defaultFragment">Home</string>
+    <string name="madeby">Made by David Garrido</string>
 </resources>

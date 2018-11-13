@@ -8,4 +8,12 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="drawerS">
+        <item name="android:listPreferredItemHeightSmall">60dp</item>
+    </style>
+
+    <style name="CText" parent="Base.TextAppearance.AppCompat.Medium">
+        <item name="android:textSize">16sp</item>
+    </style>
+
 </resources>

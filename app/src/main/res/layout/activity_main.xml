@@ -3,6 +3,7 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#1A2632"
     android:fitsSystemWindows="true">
     <!-- The main content view -->
 
@@ -24,10 +25,15 @@
 
     <android.support.design.widget.NavigationView
         android:id="@+id/nav_view"
-        android:layout_width="wrap_content"
+        android:layout_width="320dp"
         android:layout_height="match_parent"
         android:layout_gravity="start"
+        android:background="#15202B"
         android:fitsSystemWindows="true"
+        android:theme="@style/drawerS"
         app:headerLayout="@layout/header_navigation_drawer"
+        app:itemIconTint="@color/drawer_item"
+        app:itemTextAppearance="@style/CText"
+        app:itemTextColor="@color/drawer_item"
         app:menu="@menu/nav_options" />
 </android.support.v4.widget.DrawerLayout>
