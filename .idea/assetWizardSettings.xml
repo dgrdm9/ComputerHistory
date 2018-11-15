@@ -49,8 +49,8 @@
                                     <map>
                                       <entry key="assetType" value="IMAGE" />
                                       <entry key="iconShape" value="NONE" />
-                                      <entry key="imageAsset" value="C:\Users\corxo\Desktop\bg.jpg" />
-                                      <entry key="outputName" value="bg" />
+                                      <entry key="imageAsset" value="D:\Descargas\computacion.jpg" />
+                                      <entry key="outputName" value="computacion" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -60,7 +60,7 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="outputIconType" value="ACTIONBAR" />
+                            <entry key="outputIconType" value="LAUNCHER_LEGACY" />
                           </map>
                         </option>
                       </PersistentState>
