@@ -16,4 +16,9 @@
         <item name="android:textSize">16sp</item>
     </style>
 
+    <style name="NameText" parent="Base.TextAppearance.AppCompat.Large">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
 </resources>
