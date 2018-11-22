@@ -9,4 +9,8 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="defaultFragment">Home</string>
     <string name="madeby">Made by David Garrido</string>
+    <string name="homeDescription1">Los ordenadores están aquí para quedarse, pero ¿cuáles son los orígenes de este fenómeno del siglo?
+        ¿Qué calculó la primera computadora?</string>
+    <string name="homeDescription2">Descubra aquí cómo los ordenadores jugaron un papel importante en la Segunda Guerra Mundial
+        y aprenderá sobre los hitos en la tecnología, que hicieron posible incluir cantidades masivas de información en un pequeño chip.</string>
 </resources>
