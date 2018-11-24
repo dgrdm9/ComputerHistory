@@ -49,8 +49,8 @@
                                     <map>
                                       <entry key="assetType" value="IMAGE" />
                                       <entry key="iconShape" value="NONE" />
-                                      <entry key="imageAsset" value="D:\Descargas\computacion.jpg" />
-                                      <entry key="outputName" value="computacion" />
+                                      <entry key="imageAsset" value="D:\Descargas\laptop.png" />
+                                      <entry key="outputName" value="laptop_not_round" />
                                     </map>
                                   </option>
                                 </PersistentState>

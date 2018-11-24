@@ -1,11 +1,9 @@
 package com.dgrdm9.menulist.Models;
 
 public class Evento {
+
     private String fecha;
     private String descripcion;
-
-    public Evento() {
-    }
 
     public Evento(String fecha, String descripcion) {
         this.fecha = fecha;

@@ -1,5 +1,6 @@
 <resources>
-    <string name="app_name">Computer History</string>
+    <string name="app_name">History 101</string>
+    <string name="chistory">Computer History</string>
     <string name="first_gen">Primera Generación</string>
     <string name="second_gen">Segunda Generación</string>
     <string name="third_gen">Tercera Generación</string>
@@ -7,10 +8,15 @@
     <string name="prehistory">Prehistoria</string>
     <string name="group">Generaciones</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="defaultFragment">Home</string>
+    <string name="defaultFragment">Inicio</string>
     <string name="madeby">Made by David Garrido</string>
     <string name="homeDescription1">Los ordenadores están aquí para quedarse, pero ¿cuáles son los orígenes de este fenómeno del siglo?
         ¿Qué calculó la primera computadora?</string>
     <string name="homeDescription2">Descubra aquí cómo los ordenadores jugaron un papel importante en la Segunda Guerra Mundial
-        y aprenderá sobre los hitos en la tecnología, que hicieron posible incluir cantidades masivas de información en un pequeño chip.</string>
+        y aprenda sobre los hitos en la tecnología que hicieron posible incluir cantidades masivas de información en un pequeño chip.</string>
+    <string name="prehFecha">3000 a. C. - 1945</string>
+    <string name="firstFecha">1946 &#8211; 1954</string>
+    <string name="secondFecha">1955 &#8211; 1963</string>
+    <string name="thirdFecha">1964 &#8211; 1970</string>
+    <string name="forthFecha">1971 &#8211; 2001</string>
 </resources>
