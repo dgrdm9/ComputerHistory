@@ -25,11 +25,17 @@
         android:layout_marginTop="1dp"
         android:background="#38444D" />
 
+    <ImageView
+        android:id="@+id/secondImage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/secondDivider" />
+
     <ListView
         android:id="@+id/listView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/secondDivider"
+        android:layout_below="@+id/secondImage"
         android:divider="#38444D"
         android:dividerHeight="1px" />
 
