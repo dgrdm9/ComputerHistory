@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AbsListView;
 import android.widget.ImageView;
 import android.widget.ListView;
 
@@ -41,6 +42,17 @@ public class ThirdFragment extends Fragment {
         Picasso.get().load(R.drawable.ibm360).fit().centerCrop().into(imageView);
         eventoList = new ArrayList<>();
         listView = v.findViewById(R.id.listView3);
+        listView.setOnScrollListener(new AbsListView.OnScrollListener() {
+            @Override
+            public void onScrollStateChanged(AbsListView absListView, int i) {
+                imageView.setVisibility(View.GONE);
+            }
+
+            @Override
+            public void onScroll(AbsListView absListView, int i, int i1, int i2) {
+                if(i == 0) imageView.setVisibility(View.VISIBLE);
+            }
+        });
         eventoList = Util.setThirdEventos();
         listAdapter = new EventoAdapter(getContext(), R.layout.list_item, eventoList);
         listView.setAdapter(listAdapter);

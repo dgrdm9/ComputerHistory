@@ -6,9 +6,11 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AbsListView;
 import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.dgrdm9.menulist.Adapters.EventoAdapter;
 import com.dgrdm9.menulist.Models.Evento;
@@ -43,6 +45,17 @@ public class PrehFragment extends Fragment {
         Picasso.get().load(R.drawable.babbage).fit().centerCrop().into(imageView);
         eventoList = new ArrayList<>();
         listView = v.findViewById(R.id.listView0);
+        listView.setOnScrollListener(new AbsListView.OnScrollListener() {
+            @Override
+            public void onScrollStateChanged(AbsListView absListView, int i) {
+                imageView.setVisibility(View.GONE);
+            }
+
+            @Override
+            public void onScroll(AbsListView absListView, int i, int i1, int i2) {
+                if(i == 0) imageView.setVisibility(View.VISIBLE);
+            }
+        });
         eventoList = Util.setPrehEventos();
         listAdapter = new EventoAdapter(getContext(), R.layout.list_item, eventoList);
         listView.setAdapter(listAdapter);
