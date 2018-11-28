@@ -6,12 +6,14 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.dgrdm9.menulist.Adapters.EventoAdapter;
 import com.dgrdm9.menulist.Models.Evento;
 import com.dgrdm9.menulist.R;
 import com.dgrdm9.menulist.Utilities.Util;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,6 +26,7 @@ public class ThirdFragment extends Fragment {
     private ListView listView;
     private List<Evento> eventoList;
     private EventoAdapter listAdapter;
+    private ImageView imageView;
 
     public ThirdFragment() {
         // Required empty public constructor
@@ -34,6 +37,8 @@ public class ThirdFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_third, container, false);
+        imageView = v.findViewById(R.id.thirdImage);
+        Picasso.get().load(R.drawable.ibm360).fit().centerCrop().into(imageView);
         eventoList = new ArrayList<>();
         listView = v.findViewById(R.id.listView3);
         eventoList = Util.setThirdEventos();

@@ -6,12 +6,14 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.dgrdm9.menulist.Adapters.EventoAdapter;
 import com.dgrdm9.menulist.Models.Evento;
 import com.dgrdm9.menulist.R;
 import com.dgrdm9.menulist.Utilities.Util;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,6 +26,7 @@ public class FirstFragment extends Fragment {
     private ListView listView;
     private List<Evento> eventoList;
     private EventoAdapter listAdapter;
+    private ImageView imageView;
 
     public FirstFragment() {
         // Required empty public constructor
@@ -35,6 +38,8 @@ public class FirstFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_first, container, false);
+        imageView = v.findViewById(R.id.firstImage);
+        Picasso.get().load(R.drawable.eniac).fit().centerCrop().into(imageView);
         eventoList = new ArrayList<>();
         listView = v.findViewById(R.id.listView1);
         eventoList = Util.setFirstEventos();

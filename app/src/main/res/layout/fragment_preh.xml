@@ -25,11 +25,17 @@
         android:layout_marginTop="1dp"
         android:background="#38444D" />
 
+    <ImageView
+        android:id="@+id/prehImage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/prehDivider" />
+
     <ListView
         android:id="@+id/listView0"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/prehDivider"
+        android:layout_below="@+id/prehImage"
         android:divider="#38444D"
         android:dividerHeight="1px" />
 
